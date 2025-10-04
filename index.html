@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>&lt;/tr consulting&gt; — Digital konsult inom low-code och Flowfactory</title>
+  <meta name="description" content="&lt;/tr consulting&gt; hjälper företag bygga smarta lösningar med low-code (Flowfactory), integrationer och automatisering." />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Hem">
+      <!-- Simple text logo so we can safely show the angle brackets -->
+      <span class="brand-mark">&lt;/tr</span> <span class="brand-tail">consulting&gt;</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Meny</button>
+    <nav id="site-nav" class="site-nav" aria-label="Huvudmeny">
+      <a href="#services">Tjänster</a>
+      <a href="#cases">Case</a>
+      <a href="#about">Om mig</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Low-code som faktiskt levererar.</h1>
+        <p>Jag hjälper er att bygga och lansera affärskritiska flöden i <strong>Flowfactory</strong> – snabbt, stabilt och utan onödig komplexitet.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Boka ett möte</a>
+          <a class="btn ghost" href="#services">Se tjänster</a>
+        </div>
+        <ul class="cred-list" aria-label="Kompetenser">
+          <li>Flowfactory & low-code</li>
+          <li>Integrationer & API:er</li>
+          <li>Automatisering & dataflöden</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Tjänster</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Low-code utveckling</h3>
+          <p>Design och implementation av moduler, vyer och processer i Flowfactory. Fokus på robusta dataflöden och bra UX.</p>
+          <ul class="bullets">
+            <li>Modul- och datamodellering</li>
+            <li>Formulär, validering, vylogik</li>
+            <li>Prestanda & caching</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Integrationer</h3>
+          <p>Kopplar samman era system via REST/Graph API:er. Smarta mappningar, resilient felhantering och tydlig loggning.</p>
+          <ul class="bullets">
+            <li>Upsales, Vitec, Siemens m.fl.</li>
+            <li>Webhookar & kö-hantering</li>
+            <li>Monitorering & larm</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Automatisering</h3>
+          <p>Automatiserar repetitiva uppgifter och rapportering. Förenklar vardagen och minskar fel.</p>
+          <ul class="bullets">
+            <li>Batchflöden & schemajobb</li>
+            <li>CSV/Excel-pipelines</li>
+            <li>Statistik & dashboards</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" class="section alt">
+      <h2>Utvalda case</h2>
+      <div class="case-grid">
+        <article class="case">
+          <h3>Orderflöde via CSV → Upsales</h3>
+          <p>Byggde en pipeline som läser kundernas utskriftsvolymer, aggregerar per skrivare och skapar order automatiskt — med tydlig loggning och dubblettskydd.</p>
+          <ul class="tags"><li>Integration</li><li>Automation</li><li>Loggning</li></ul>
+        </article>
+        <article class="case">
+          <h3>Proposal till Siemens SieSmart</h3>
+          <p>Mapper från Upsales-order till SieSmart-förslag med token-hantering, kontaktmatchning och automatiskt beslutsflöde.</p>
+          <ul class="tags"><li>API</li><li>Auth</li><li>Flowfactory</li></ul>
+        </article>
+        <article class="case">
+          <h3>Vårdapp i Flowfactory</h3>
+          <p>Modul för patientens mående (1–5) och KBT-stöd, med plan för BankID-inloggning och säkra dataflöden.</p>
+          <ul class="tags"><li>Low-code</li><li>Hälsa</li><li>UX</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>Om mig</h2>
+      <p>Jag heter Tobias Ransäter och driver &lt;/tr consulting&gt;. Jag kombinerar <em>low-code</em> med sund arkitektur och pragmatisk leverans. Målet: lösningar som håller – utan att bli onödigt komplexa.</p>
+      <ul class="checklist">
+        <li>Snabb prototyp → stabil produktion</li>
+        <li>Tydlig kommunikation & dokumentation</li>
+        <li>Hjälper gärna till med krav & prioritering</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section alt">
+      <h2>Kontakt</h2>
+      <p>Skicka ett meddelande så återkommer jag normalt samma dag.</p>
+      <!-- Replace action URL with your Formspree endpoint or chosen form backend -->
+      <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+        <div class="grid">
+          <label>
+            Namn
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            E-post
+            <input type="email" name="email" required />
+          </label>
+        </div>
+        <label>
+          Meddelande
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Skicka</button>
+        <p class="micro">Genom att skicka accepterar du att jag kontaktar dig kring ditt ärende.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> &lt;/tr consulting&gt;. Alla rättigheter förbehållna.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
