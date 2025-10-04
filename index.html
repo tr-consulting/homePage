@@ -211,7 +211,7 @@
     <section id="contact" class="section alt">
       <h2>Kontakt</h2>
       <p>Vill du se hur era flöden kan bli snabbare och mer pålitliga? Hör av dig.</p>
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mqkjpybn" method="POST">
+     <form id="contact-form" class="contact-form" action="https://formspree.io/f/mqkjpybn" method="POST">
   <div class="grid">
     <label>
       Namn
@@ -224,13 +224,49 @@
   </div>
 
   <label>
+    Ämne
+    <select name="topic" required>
+      <option value="" disabled selected>Välj vad det gäller</option>
+      <option value="integration">Integration eller automation</option>
+      <option value="powerbi">Power BI & datavisualisering</option>
+      <option value="document">Dokumentflöden & OCR</option>
+      <option value="ai">AI och smarta arbetsflöden</option>
+      <option value="other">Annat</option>
+    </select>
+  </label>
+
+  <label>
     Meddelande
-    <textarea name="message" rows="6" placeholder="Vad vill du ha hjälp med?" required></textarea>
+    <textarea name="message" rows="6" placeholder="Beskriv kort vad du vill ha hjälp med" required></textarea>
   </label>
 
   <button class="btn primary" type="submit">Skicka meddelande</button>
-  <p id="thank-you" style="display:none;color:var(--brand2);margin-top:1rem;">Tack! Ditt meddelande har skickats 👌</p>
+  <p id="thank-you" style="display:none;color:var(--brand2);margin-top:1rem;">
+    Tack! Ditt meddelande har skickats 👌
+  </p>
+  <p class="micro" style="color:var(--muted);margin-top:.6rem">
+    Genom att skicka formuläret accepterar du att jag kontaktar dig via e-post kring ditt ärende.
+  </p>
 </form>
+
+<script>
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+    if (response.ok) {
+      form.reset();
+      document.getElementById("thank-you").style.display = "block";
+    } else {
+      alert("Något gick fel, försök igen senare.");
+    }
+  });
+</script>
 
 <script>
   const form = document.getElementById("contact-form");
