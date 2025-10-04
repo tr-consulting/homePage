@@ -211,15 +211,40 @@
     <section id="contact" class="section alt">
       <h2>Kontakt</h2>
       <p>Vill du se hur era flöden kan bli snabbare och mer pålitliga? Hör av dig.</p>
-      <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
-        <div class="grid">
-          <label>Namn<input type="text" name="name" required /></label>
-          <label>E‑post<input type="email" name="email" required /></label>
-        </div>
-        <label>Meddelande<textarea name="message" rows="6" required></textarea></label>
-        <button class="btn primary" type="submit">Skicka</button>
-        <p class="micro" style="color:var(--muted);margin-top:.6rem">Genom att skicka accepterar du att jag kontaktar dig kring ditt ärende.</p>
-      </form>
+      <form class="contact-form" action="https://formspree.io/f/mblzkdby" method="POST">
+  <div class="grid">
+    <label>
+      Namn
+      <input type="text" name="name" placeholder="För- och efternamn" required />
+    </label>
+    <label>
+      E-postadress
+      <input type="email" name="email" placeholder="namn@företag.se" required />
+    </label>
+  </div>
+
+  <label>
+    Ämne
+    <select name="topic" required>
+      <option value="" disabled selected>Välj vad det gäller</option>
+      <option value="integration">Integration eller automation</option>
+      <option value="powerbi">Power BI & datavisualisering</option>
+      <option value="document">Dokumentflöden & OCR</option>
+      <option value="other">Annat</option>
+    </select>
+  </label>
+
+  <label>
+    Meddelande
+    <textarea name="message" rows="6" placeholder="Beskriv kort vad du vill ha hjälp med" required></textarea>
+  </label>
+
+  <button class="btn primary" type="submit">Skicka meddelande</button>
+
+  <p class="micro" style="color:var(--muted);margin-top:.6rem">
+    Genom att skicka formuläret accepterar du att jag kontaktar dig via e-post kring ditt ärende.
+  </p>
+</form>
     </section>
   </main>
 
