@@ -4,7 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>&lt;/tr consulting&gt; — Integrationer, automation, dokumentflöden & Power BI</title>
-  <meta name="description" content="&lt;/tr consulting&gt; hjälper organisationer att integrera system, automatisera processer, bygga bryggor via Azure Functions, hantera dokumentflöden och visualisera data i Power BI." />
+  <!-- Primary SEO -->
+  <link rel="canonical" href="https://tr-consulting.se/" />
+  <meta name="description" content="Integrationer, automation och Power BI. Tobias Ransäter på &lt;/tr consulting&gt; bygger stabila API‑bryggor (Azure Functions), dokumentflöden och datavisualiseringar som minskar manuellt arbete." />
+  <meta name="author" content="Tobias Ransäter" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tr-consulting.se/" />
+  <meta property="og:title" content="&lt;/tr consulting&gt; — Integrationer, automation &amp; Power BI" />
+  <meta property="og:description" content="Systemintegration, dokumentflöden och datavisualisering. Robust arkitektur med Azure Functions, AI‑routning och Power BI." />
+  <meta property="og:image" content="https://tr-consulting.se/assets/og-image.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="&lt;/tr consulting&gt; — Integrationer, automation &amp; Power BI" />
+  <meta name="twitter:description" content="Integrationer, dokumentflöden, AI‑styrda arbetsflöden och Power BI." />
+  <meta name="twitter:image" content="https://tr-consulting.se/assets/og-image.png" />
+  
+  <!-- JSON-LD Organization/Person -->
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "</tr consulting>",
+    "url": "https://tr-consulting.se/",
+    "logo": "https://tr-consulting.se/assets/favicon.svg",
+    "sameAs": ["https://www.linkedin.com/in/tobiasransater/"],
+    "founder": {
+      "@type": "Person",
+      "name": "Tobias Ransäter",
+      "jobTitle": "Konsult inom integration, automation och Power BI",
+      "sameAs": ["https://www.linkedin.com/in/tobiasransater/"]
+    }
+  }</script>
   <style>
     /* ================================
        Single-file CSS for quick deploy
@@ -23,7 +55,7 @@
     h1,h2,h3{line-height:1.15;margin:0 0 .6rem}
     p{margin:.6rem 0 1rem;color:var(--muted)}
     ul{padding-left:1.1rem}
-    .section{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,4rem) 1.2rem}
+    .section{max-width:vx§ar(--maxw);margin:0 auto;padding:clamp(2rem,4vw,4rem) 1.2rem}
     .section.alt{background:linear-gradient(180deg,rgba(92,200,255,.06),rgba(138,255,193,.04));border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke)}
 
     /* Header */
@@ -79,50 +111,18 @@
     input,textarea{width:100%;background:#0e1016;color:var(--text);border:1px solid var(--stroke);border-radius:10px;padding:.7rem .8rem}
     input:focus,textarea:focus{outline:2px solid rgba(92,200,255,.5)}
 
+    /* Checklist */
+    .checklist{ list-style:none; padding:0; }
+    .checklist li{ position:relative; padding-left:1.5rem; margin:.4rem 0; }
+    .checklist li::before{ content:"✔"; color:var(--ok); position:absolute; left:0; }
+
+    /* Select styling */
+    select{ width:100%; background:#0e1016; color:var(--text); border:1px solid var(--stroke); border-radius:10px; padding:.7rem .8rem; }
+    select:focus{ outline:2px solid rgba(92,200,255,.5); }
+
     /* Footer */
     .site-footer{max-width:var(--maxw);margin:0 auto;padding:2rem 1.2rem;color:var(--muted);display:flex;justify-content:center;border-top:1px solid var(--stroke)}
   </style>
-  <!-- Primary SEO -->
-<meta name="description" content="Integrationer, automation och Power BI. Tobias Ransäter på &lt;/tr consulting&gt; bygger stabila API-bryggor (Azure Functions), dokumentflöden och datavisualiseringar som minskar manuellt arbete." />
-<meta name="author" content="Tobias Ransäter" />
-<!-- (Meta keywords används nästan inte av Google längre; gör ingen skada, men kan utelämnas) -->
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tr-consulting.se/" />
-<meta property="og:title" content="&lt;/tr consulting&gt; — Integrationer, automation & Power BI" />
-<meta property="og:description" content="Systemintegration, dokumenthantering och datavisualisering. Robust arkitektur med Azure Functions, AI-routning och Power BI." />
-<meta property="og:image" content="https://tr-consulting.se/assets/og-image.png" />
-<!-- Skapa gärna en 1200x630-bild och lägg den på den sökvägen -->
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="&lt;/tr consulting&gt; — Integrationer, automation & Power BI" />
-<meta name="twitter:description" content="Integrationer, dokumentflöden, AI-styrda arbetsflöden och Power BI." />
-<meta name="twitter:image" content="https://tr-consulting.se/assets/og-image.png" />
-
-<!-- JSON-LD: Organization + Person with LinkedIn -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "</tr consulting>",
-  "url": "https://tr-consulting.se/",
-  "logo": "https://tr-consulting.se/assets/favicon.svg",
-  "sameAs": [
-    "https://www.linkedin.com/in/tobiasransater/"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "Tobias Ransäter",
-    "url": "https://tr-consulting.se/",
-    "sameAs": [
-      "https://www.linkedin.com/in/tobiasransater/"
-    ],
-    "jobTitle": "Konsult inom integration, automation och Power BI"
-  }
-}
-</script>
 </head>
 <body>
   <header class="site-header">
@@ -241,97 +241,110 @@
 
     <section id="about" class="section">
       <h2>Om mig</h2>
-      <p>Jag heter Tobias Ransäter och driver &lt;/tr consulting&gt;. Jag fokuserar på integrationer, dokumentflöden, automation och data — utan plattformsberoenden. Jag tar gärna uppdrag som inte krockar med low‑code‑åtaganden.</p>
-      <ul class="cred-list">
-        <li>Pragmatisk arkitektur</li>
-        <li>Tydlig loggning & övervakning</li>
-        <li>Snabb prototyp → stabil produktion</li>
+      <p>Jag heter <strong>Tobias Ransäter</strong> och driver &lt;/tr consulting&gt;. Jag är konsult med fokus på <em>integrationer</em>, <em>automation</em>, <em>dokumentflöden</em> och <em>Power BI</em>. Jag trivs när jag får koppla ihop system på ett robust och begripligt sätt – med tydlig loggning, enkel felsökning och så lite manuellt arbete som möjligt.</p>
+      <ul class="checklist">
+        <li>Bygger API‑bryggor med <strong>Azure Functions</strong> (webhooks, schemalagda jobb, återförsök/köer).</li>
+        <li>Integrerar telefoni/växel (t.ex. <strong>Lynes</strong>) med CRM/ärende/ERP för uppslag och automatisk samtalsloggning.</li>
+        <li>Designar dokumentflöden: <strong>OCR/AI‑extrahering</strong>, validering och styrning till DMS/ERP där färdiga connectors saknas.</li>
+        <li>Visualiserar data i <strong>Power BI</strong> – modellering, DAX, delning och governance.</li>
+        <li>Pragmatisk arkitektur: börja enkelt, leverera snabbt, hårdna där det behövs.</li>
       </ul>
+      <p>Jag tar gärna uppdrag där vi tillsammans identifierar vad som ger mest effekt: automatisera en handpåläggning, få ordning på ett specifikt dataflöde eller bygga ett litet, pålitligt integrationslager mellan affärskritiska system.</p>
+      <p class="micro" style="color:var(--muted)">Mer om mig: <a href="https://www.linkedin.com/in/tobiasransater/" rel="noopener">LinkedIn – Tobias Ransäter</a></p>
+    </section>
+
+    <!-- Why choose me -->
+    <section class="section alt" id="why">
+      <h2>Varför välja mig</h2>
+      <div class="cards">
+        <article class="card"><h3>Resultat först</h3><p>Jag prioriterar det som ger effekt snabbt och håller över tid. Litet scope, kort cykel, mätbar nytta.</p></article>
+        <article class="card"><h3>Trygg integration</h3><p>Tydlig loggning och felhantering, återförsök/köer och idempotens så att flöden inte tappar data.</p></article>
+        <article class="card"><h3>Ren data</h3><p>Normalisering, validering och spårbarhet — så att både system och människor förstår vad som händer.</p></article>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <h2>Så jobbar jag</h2>
+      <ol class="checklist">
+        <li>Snabb genomlysning och målsättning (1–2 möten).</li>
+        <li>Prototyp/POC med verkliga data och tydlig loggning.</li>
+        <li>Hårdning till produktion: säkerhet, drift, övervakning.</li>
+        <li>Överlämning och enkel dokumentation.</li>
+      </ol>
+    </section>
+
+    <!-- Tech -->
+    <section class="section alt" id="tech">
+      <h2>Teknik & plattformar</h2>
+      <p>Azure Functions (HTTP/Timer/Queue), Webhooks, REST/Graph API, OAuth2, JSON, Power BI (DAX, modellering, delning), GitHub Actions, CSV/Excel‑pipelines, DMS/CRM/ERP‑bryggor.</p>
     </section>
 
     <section id="contact" class="section alt">
       <h2>Kontakt</h2>
       <p>Vill du se hur era flöden kan bli snabbare och mer pålitliga? Hör av dig.</p>
-     <form id="contact-form" class="contact-form" action="https://formspree.io/f/mblzkdby" method="POST">
-  <div class="grid">
-    <label>
-      Namn
-      <input type="text" name="name" placeholder="För- och efternamn" required />
-    </label>
-    <label>
-      E-postadress
-      <input type="email" name="email" placeholder="namn@företag.se" required />
-    </label>
-  </div>
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mblzkdby" method="POST">
+        <div class="grid">
+          <label>
+            Namn
+            <input type="text" name="name" placeholder="För- och efternamn" required />
+          </label>
+          <label>
+            E-postadress
+            <input type="email" name="email" placeholder="namn@företag.se" required />
+          </label>
+        </div>
 
-  <label>
-    Ämne
-    <select name="topic" required>
-      <option value="" disabled selected>Välj vad det gäller</option>
-      <option value="integration">Integration eller automation</option>
-      <option value="powerbi">Power BI & datavisualisering</option>
-      <option value="document">Dokumentflöden & OCR</option>
-      <option value="ai">AI och smarta arbetsflöden</option>
-      <option value="other">Annat</option>
-    </select>
-  </label>
+        <label>
+          Ämne
+          <select name="topic" required>
+            <option value="" disabled selected>Välj vad det gäller</option>
+            <option value="integration">Integration eller automation</option>
+            <option value="powerbi">Power BI & datavisualisering</option>
+            <option value="document">Dokumentflöden & OCR</option>
+            <option value="ai">AI och smarta arbetsflöden</option>
+            <option value="other">Annat</option>
+          </select>
+        </label>
 
-  <label>
-    Meddelande
-    <textarea name="message" rows="6" placeholder="Beskriv kort vad du vill ha hjälp med" required></textarea>
-  </label>
+        <label>
+          Meddelande
+          <textarea name="message" rows="6" placeholder="Beskriv kort vad du vill ha hjälp med" required></textarea>
+        </label>
 
-  <button class="btn primary" type="submit">Skicka meddelande</button>
-  <p id="thank-you" style="display:none;color:var(--brand2);margin-top:1rem;">
-    Tack! Ditt meddelande har skickats 👌
-  </p>
-  <p class="micro" style="color:var(--muted);margin-top:.6rem">
-    Genom att skicka formuläret accepterar du att jag kontaktar dig via e-post kring ditt ärende.
-  </p>
-</form>
+        <button class="btn primary" type="submit">Skicka meddelande</button>
+        <p id="thank-you" style="display:none;color:var(--brand2);margin-top:1rem;">Tack! Ditt meddelande har skickats 👌</p>
+        <p class="micro" style="color:var(--muted);margin-top:.6rem">Genom att skicka formuläret accepterar du att jag kontaktar dig via e-post kring ditt ärende.</p>
+      </form>
 
-<script>
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-    });
-    if (response.ok) {
-      form.reset();
-      document.getElementById("thank-you").style.display = "block";
-    } else {
-      alert("Något gick fel, försök igen senare.");
-    }
-  });
-</script>
-
-<script>
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-    });
-    if (response.ok) {
-      form.reset();
-      document.getElementById("thank-you").style.display = "block";
-    } else {
-      alert("Något gick fel, försök igen senare.");
-    }
-  });
-</script>
+      <script>
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+          if (response.ok) {
+            form.reset();
+            document.getElementById("thank-you").style.display = "block";
+          } else {
+            alert("Något gick fel, försök igen senare.");
+          }
+        });
+      </script>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> &lt;/tr consulting&gt;. Alla rättigheter förbehållna.</p>
+    <div>
+      <p>&copy; <span id="year"></span> &lt;/tr consulting&gt;. Alla rättigheter förbehållna.</p>
+      <p class="micro" style="text-align:center;color:var(--muted)">
+        Kontakt: <a href="mailto:tobias@tr-consulting.se">tobias@tr-consulting.se</a> · Stockholm · <a href="https://www.linkedin.com/in/tobiasransater/" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
   </footer>
 
   <script>
