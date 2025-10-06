@@ -45,17 +45,18 @@
        NOTE: Comments are in English
     =================================== */
     :root{
-      --bg:#0a0c10;            /* dark background */
-      --panel:#10131a;          /* card background */
-      --text:#e9ecf1;           /* main text */
-      --muted:#b8bdc7;          /* secondary text */
-      --brand:#2ec5ff;          /* RanLabs blue */
-      --brand2:#79f2c0;         /* RanLabs green */
-      --stroke:#232a36;         /* borders */
-      --ok:#30d158;             /* check icon */
-      --radius:16px;            /* big rounded corners */
-      --shadow:0 12px 36px rgba(0,0,0,.28);
-      --maxw:1120px;            /* page width */
+      /* RanLabs palette tuned to draft logo */
+      --bg:#0a1220;            /* deeper navy */
+      --panel:#0f1828;         /* panels */
+      --text:#e9eef6;          /* main text */
+      --muted:#b9c2d3;         /* secondary */
+      --brand:#3bd5ff;         /* cyan from logo */
+      --brand2:#7df5c6;        /* mint/green from logo */
+      --stroke:#1c2434;        /* subtle border */
+      --ok:#30d158;
+      --radius:16px;
+      --shadow:0 14px 38px rgba(5,10,20,.32);
+      --maxw:1120px;
       --font:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
     }
     *{box-sizing:border-box}
@@ -73,8 +74,8 @@
     /* Header */
     .site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:.8rem 1.2rem;background:rgba(10,12,16,.7);backdrop-filter:blur(6px);border-bottom:1px solid var(--stroke)}
     .brand{display:inline-flex;align-items:baseline;gap:.35rem;font-weight:800;letter-spacing:.2px}
-    .brand-mark{color:var(--brand);font-size:1.2rem}
-    .brand-tail{color:var(--text);font-size:1.2rem}
+    .brand-mark{font-size:1.25rem;font-weight:900;letter-spacing:.2px;background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent} 
+    .brand-tail{font-size:1.25rem;font-weight:900;letter-spacing:.2px;background:linear-gradient(135deg,var(--brand2),var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent} 
 
     .nav-toggle{display:none;background:none;color:var(--text);border:1px solid var(--stroke);border-radius:10px;padding:.4rem .6rem}
     .site-nav{display:flex;gap:1rem}
@@ -88,17 +89,18 @@
 
     /* Hero */
     .hero{padding:clamp(3rem,8vw,8rem) 1.2rem;background:
-      radial-gradient(1100px 700px at 5% -10%, rgba(46,197,255,.16), transparent 60%),
-      radial-gradient(1000px 650px at 95% -20%, rgba(121,242,192,.12), transparent 60%);
+      radial-gradient(1200px 760px at 6% -12%, rgba(59,213,255,.18), transparent 62%),
+      radial-gradient(1100px 700px at 96% -22%, rgba(125,245,198,.14), transparent 62%);
       border-bottom:1px solid var(--stroke)}
     .hero-inner{max-width:var(--maxw);margin:0 auto}
     .hero h1{font-size:clamp(2rem,4vw,3.2rem)}
     .cta-row{display:flex;gap:.8rem;margin:1.2rem 0 1rem;flex-wrap:wrap}
     .btn{display:inline-block;border:1px solid var(--stroke);padding:.7rem 1rem;border-radius:12px;font-weight:600}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#051018;border:none}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#051018;border:none;box-shadow:0 6px 16px rgba(59,213,255,.18)}
+    .btn.primary:hover{transform:translateY(-1px)}
     .btn.ghost{background:transparent}
     .cred-list{display:flex;gap:1rem;list-style:none;padding:0;margin-top:.4rem;flex-wrap:wrap}
-    .cred-list li{border:1px solid var(--stroke);border-radius:999px;padding:.4rem .7rem;color:var(--text)}
+    .cred-list li{border:1px solid color-mix(in oklab, var(--brand) 35%, #ffffff 0%);border-radius:999px;padding:.4rem .7rem;color:var(--text);background:linear-gradient(180deg,rgba(59,213,255,.06),rgba(125,245,198,.04))} 
 
     /* Cards */
     .cards{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
@@ -121,7 +123,7 @@
     @media (max-width:640px){.contact-form .grid{grid-template-columns:1fr}}
     label{display:grid;gap:.35rem;color:var(--text);font-weight:600}
     input,textarea{width:100%;background:#0e1016;color:var(--text);border:1px solid var(--stroke);border-radius:10px;padding:.7rem .8rem}
-    input:focus,textarea:focus{outline:2px solid rgba(46,197,255,.5)}
+    input:focus,textarea:focus{outline:2px solid rgba(59,213,255,.55)}
 
     /* Checklist */
     .checklist{ list-style:none; padding:0; }
@@ -132,6 +134,9 @@
     select{ width:100%; background:#0e1016; color:var(--text); border:1px solid var(--stroke); border-radius:10px; padding:.7rem .8rem; }
     select:focus{ outline:2px solid rgba(46,197,255,.5); }
 
+    /* Optional logo image support */
+    .brand-logo{height:28px;width:auto;display:block}
+
     /* Footer */
     .site-footer{max-width:var(--maxw);margin:0 auto;padding:2rem 1.2rem;color:var(--muted);display:flex;justify-content:center;border-top:1px solid var(--stroke)}
   </style>
@@ -139,7 +144,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Hem">
-      <span class="brand-mark">Ran</span><span class="brand-tail">Labs</span>
+      <span class="brand-mark">Ran</span> <span class="brand-tail">Labs</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Meny</button>
     <nav id="site-nav" class="site-nav" aria-label="Huvudmeny">
