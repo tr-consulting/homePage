@@ -3,32 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>&lt;/tr consulting&gt; — Integrationer, automation, dokumentflöden & Power BI</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <title>RanLabs — Integrationer, automation, dokumentflöden & Power BI</title>
+
   <!-- Primary SEO -->
-  <link rel="canonical" href="https://tr-consulting.se/" />
-  <meta name="description" content="Integrationer, automation och Power BI. Tobias Ransäter på &lt;/tr consulting&gt; bygger stabila API‑bryggor (Azure Functions), dokumentflöden och datavisualiseringar som minskar manuellt arbete." />
+  <link rel="canonical" href="https://ranlabs.se/" />
+  <meta name="description" content="Integrationer, automation och Power BI. RanLabs (grundat av Tobias Ransäter) bygger stabila API‑bryggor med Azure Functions, dokumentflöden och datavisualiseringar som minskar manuellt arbete." />
   <meta name="author" content="Tobias Ransäter" />
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tr-consulting.se/" />
-  <meta property="og:title" content="&lt;/tr consulting&gt; — Integrationer, automation &amp; Power BI" />
+  <meta property="og:url" content="https://ranlabs.se/" />
+  <meta property="og:title" content="RanLabs — Integrationer, automation &amp; Power BI" />
   <meta property="og:description" content="Systemintegration, dokumentflöden och datavisualisering. Robust arkitektur med Azure Functions, AI‑routning och Power BI." />
-  <meta property="og:image" content="https://tr-consulting.se/assets/og-image.png" />
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="&lt;/tr consulting&gt; — Integrationer, automation &amp; Power BI" />
-  <meta name="twitter:description" content="Integrationer, dokumentflöden, AI‑styrda arbetsflöden och Power BI." />
-  <meta name="twitter:image" content="https://tr-consulting.se/assets/og-image.png" />
-  
+  <meta property="og:image" content="https://ranlabs.se/assets/og-image.png" />
+
   <!-- JSON-LD Organization/Person -->
   <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "</tr consulting>",
-    "url": "https://tr-consulting.se/",
-    "logo": "https://tr-consulting.se/assets/favicon.svg",
+    "name": "RanLabs",
+    "url": "https://ranlabs.se/",
+    "logo": "https://ranlabs.se/assets/logo.svg",
     "sameAs": ["https://www.linkedin.com/in/tobiasransater/"],
     "founder": {
       "@type": "Person",
@@ -37,32 +38,43 @@
       "sameAs": ["https://www.linkedin.com/in/tobiasransater/"]
     }
   }</script>
+
   <style>
     /* ================================
-       Single-file CSS for quick deploy
+       RanLabs single-file site (update)
        NOTE: Comments are in English
     =================================== */
     :root{
-      --bg:#0b0c10; --panel:#111319; --text:#e6e7eb; --muted:#b4b8c2;
-      --brand:#5cc8ff; --brand2:#8affc1; --stroke:#262b36; --ok:#30d158;
-      --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.25); --maxw:1080px;
+      --bg:#0a0c10;            /* dark background */
+      --panel:#10131a;          /* card background */
+      --text:#e9ecf1;           /* main text */
+      --muted:#b8bdc7;          /* secondary text */
+      --brand:#2ec5ff;          /* RanLabs blue */
+      --brand2:#79f2c0;         /* RanLabs green */
+      --stroke:#232a36;         /* borders */
+      --ok:#30d158;             /* check icon */
+      --radius:16px;            /* big rounded corners */
+      --shadow:0 12px 36px rgba(0,0,0,.28);
+      --maxw:1120px;            /* page width */
+      --font:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:var(--font)}
     img{max-width:100%;display:block}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     h1,h2,h3{line-height:1.15;margin:0 0 .6rem}
     p{margin:.6rem 0 1rem;color:var(--muted)}
     ul{padding-left:1.1rem}
-    .section{max-width:vx§ar(--maxw);margin:0 auto;padding:clamp(2rem,4vw,4rem) 1.2rem}
-    .section.alt{background:linear-gradient(180deg,rgba(92,200,255,.06),rgba(138,255,193,.04));border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke)}
+
+    .section{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,4vw,4rem) 1.2rem}
+    .section.alt{background:linear-gradient(180deg,rgba(46,197,255,.06),rgba(121,242,192,.04));border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke)}
 
     /* Header */
-    .site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:.8rem 1.2rem;background:rgba(11,12,16,.7);backdrop-filter:blur(6px);border-bottom:1px solid var(--stroke)}
+    .site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:.8rem 1.2rem;background:rgba(10,12,16,.7);backdrop-filter:blur(6px);border-bottom:1px solid var(--stroke)}
     .brand{display:inline-flex;align-items:baseline;gap:.35rem;font-weight:800;letter-spacing:.2px}
-    .brand-mark{color:var(--brand);font-size:1.1rem}
-    .brand-tail{color:var(--text);font-size:1.1rem}
+    .brand-mark{color:var(--brand);font-size:1.2rem}
+    .brand-tail{color:var(--text);font-size:1.2rem}
 
     .nav-toggle{display:none;background:none;color:var(--text);border:1px solid var(--stroke);border-radius:10px;padding:.4rem .6rem}
     .site-nav{display:flex;gap:1rem}
@@ -76,8 +88,8 @@
 
     /* Hero */
     .hero{padding:clamp(3rem,8vw,8rem) 1.2rem;background:
-      radial-gradient(1000px 600px at 10% -10%, rgba(92,200,255,.18), transparent 60%),
-      radial-gradient(900px 600px at 90% -20%, rgba(138,255,193,.14), transparent 60%);
+      radial-gradient(1100px 700px at 5% -10%, rgba(46,197,255,.16), transparent 60%),
+      radial-gradient(1000px 650px at 95% -20%, rgba(121,242,192,.12), transparent 60%);
       border-bottom:1px solid var(--stroke)}
     .hero-inner{max-width:var(--maxw);margin:0 auto}
     .hero h1{font-size:clamp(2rem,4vw,3.2rem)}
@@ -109,7 +121,7 @@
     @media (max-width:640px){.contact-form .grid{grid-template-columns:1fr}}
     label{display:grid;gap:.35rem;color:var(--text);font-weight:600}
     input,textarea{width:100%;background:#0e1016;color:var(--text);border:1px solid var(--stroke);border-radius:10px;padding:.7rem .8rem}
-    input:focus,textarea:focus{outline:2px solid rgba(92,200,255,.5)}
+    input:focus,textarea:focus{outline:2px solid rgba(46,197,255,.5)}
 
     /* Checklist */
     .checklist{ list-style:none; padding:0; }
@@ -118,7 +130,7 @@
 
     /* Select styling */
     select{ width:100%; background:#0e1016; color:var(--text); border:1px solid var(--stroke); border-radius:10px; padding:.7rem .8rem; }
-    select:focus{ outline:2px solid rgba(92,200,255,.5); }
+    select:focus{ outline:2px solid rgba(46,197,255,.5); }
 
     /* Footer */
     .site-footer{max-width:var(--maxw);margin:0 auto;padding:2rem 1.2rem;color:var(--muted);display:flex;justify-content:center;border-top:1px solid var(--stroke)}
@@ -127,13 +139,16 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Hem">
-      <span class="brand-mark">&lt;/tr</span> <span class="brand-tail">consulting&gt;</span>
+      <span class="brand-mark">Ran</span> <span class="brand-tail">Labs</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Meny</button>
     <nav id="site-nav" class="site-nav" aria-label="Huvudmeny">
       <a href="#services">Tjänster</a>
       <a href="#cases">Case</a>
       <a href="#about">Om mig</a>
+      <a href="#why">Varför</a>
+      <a href="#process">Process</a>
+      <a href="#tech">Teknik</a>
       <a href="#contact">Kontakt</a>
     </nav>
   </header>
@@ -142,7 +157,7 @@
     <section class="hero">
       <div class="hero-inner">
         <h1>Integrationer och automation som minskar manuellt jobb.</h1>
-        <p>Jag hjälper er att koppla ihop system, automatisera dokumentflöden och få data att lysa i <strong>Power BI</strong> — med hållbar arkitektur och tydlig loggning.</p>
+        <p>RanLabs hjälper er att koppla ihop system, automatisera dokumentflöden och få data att lysa i <strong>Power BI</strong> — med hållbar arkitektur och tydlig loggning.</p>
         <div class="cta-row">
           <a class="btn primary" href="#contact">Boka ett möte</a>
           <a class="btn ghost" href="#services">Se tjänster</a>
@@ -241,7 +256,7 @@
 
     <section id="about" class="section">
       <h2>Om mig</h2>
-      <p>Jag heter <strong>Tobias Ransäter</strong> och driver &lt;/tr consulting&gt;. Jag är konsult med fokus på <em>integrationer</em>, <em>automation</em>, <em>dokumentflöden</em> och <em>Power BI</em>. Jag trivs när jag får koppla ihop system på ett robust och begripligt sätt – med tydlig loggning, enkel felsökning och så lite manuellt arbete som möjligt.</p>
+      <p>Jag heter <strong>Tobias Ransäter</strong> och driver RanLabs. Jag är konsult med fokus på <em>integrationer</em>, <em>automation</em>, <em>dokumentflöden</em> och <em>Power BI</em>. Jag trivs när jag får koppla ihop system på ett robust och begripligt sätt – med tydlig loggning, enkel felsökning och så lite manuellt arbete som möjligt.</p>
       <ul class="checklist">
         <li>Bygger API‑bryggor med <strong>Azure Functions</strong> (webhooks, schemalagda jobb, återförsök/köer).</li>
         <li>Integrerar telefoni/växel (t.ex. <strong>Lynes</strong>) med CRM/ärende/ERP för uppslag och automatisk samtalsloggning.</li>
@@ -290,7 +305,7 @@
             <input type="text" name="name" placeholder="För- och efternamn" required />
           </label>
           <label>
-            E-postadress
+            E‑postadress
             <input type="email" name="email" placeholder="namn@företag.se" required />
           </label>
         </div>
@@ -314,35 +329,16 @@
 
         <button class="btn primary" type="submit">Skicka meddelande</button>
         <p id="thank-you" style="display:none;color:var(--brand2);margin-top:1rem;">Tack! Ditt meddelande har skickats 👌</p>
-        <p class="micro" style="color:var(--muted);margin-top:.6rem">Genom att skicka formuläret accepterar du att jag kontaktar dig via e-post kring ditt ärende.</p>
+        <p class="micro" style="color:var(--muted);margin-top:.6rem">Genom att skicka formuläret accepterar du att jag kontaktar dig via e‑post kring ditt ärende.</p>
       </form>
-
-      <script>
-        const form = document.getElementById("contact-form");
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const formData = new FormData(form);
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: { Accept: "application/json" },
-          });
-          if (response.ok) {
-            form.reset();
-            document.getElementById("thank-you").style.display = "block";
-          } else {
-            alert("Något gick fel, försök igen senare.");
-          }
-        });
-      </script>
     </section>
   </main>
 
   <footer class="site-footer">
     <div>
-      <p>&copy; <span id="year"></span> &lt;/tr consulting&gt;. Alla rättigheter förbehållna.</p>
+      <p>&copy; <span id="year"></span> RanLabs. Alla rättigheter förbehållna.</p>
       <p class="micro" style="text-align:center;color:var(--muted)">
-        Kontakt: <a href="mailto:tobias@tr-consulting.se">tobias@tr-consulting.se</a> · Stockholm · <a href="https://www.linkedin.com/in/tobiasransater/" rel="noopener">LinkedIn</a>
+        Kontakt: <a href="mailto:tobias@ranlabs.se">tobias@ranlabs.se</a> · Stockholm · <a href="https://www.linkedin.com/in/tobiasransater/" rel="noopener">LinkedIn</a>
       </p>
     </div>
   </footer>
@@ -357,6 +353,27 @@
         toggle.setAttribute('aria-expanded', String(open));
       });
     }
+
+    // Contact form (Formspree) — stay on page + show thank you
+    const form = document.getElementById("contact-form");
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+        if (response.ok) {
+          form.reset();
+          document.getElementById("thank-you").style.display = "block";
+        } else {
+          alert("Något gick fel, försök igen senare.");
+        }
+      });
+    }
+
     // Dynamic year
     const y = document.querySelector('#year');
     if (y) y.textContent = new Date().getFullYear();
